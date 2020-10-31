@@ -1,25 +1,12 @@
 #include "stdio.h"
 #include "prochandler.h"
 
-
-void basic_call();
-
 int main(int argc, char* argv[]){
 
 
     
 
     printf("\n----ksamp version 1.0 BETA------------------\n\n");
-
-    basic_call(); 
-
-    printf("\n---------------------------------------------\n");
-
-    return 0;
-}
-
-
-void basic_call(){
 
     char cpumodel[BUFSIZE];
     char cputype[BUFSIZE];
@@ -39,4 +26,7 @@ void basic_call(){
     int fsn = get_filesystem_number();
     printf("Number of support fs: %d\n",fsn);
 
+    printf("\n---------------------------------------------\n");
+
+    return 0;
 }

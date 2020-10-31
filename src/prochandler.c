@@ -3,16 +3,16 @@
 #include <string.h>
 #include "prochandler.h"
 
-char ERROR[] = "error reading";
+const char* ERROR = "error reading";
 
-char CPUMODEL[] = "model name";
-char CPUTYPE[] = "vendor_id";
-char VERSION[] = "Linux";
+static const char* CPUMODEL = "model name";
+static const char* CPUTYPE = "vendor_id";
+static const char* VERSION = "Linux";
 
-char CPUINFO[] = "/proc/cpuinfo";
-char KERNELVERSION[] = "/proc/version";
-char UPTIME[] = "/proc/uptime";
-char FILESYSTEM[] = "/proc/filesystems";
+static const char* CPUINFO = "/proc/cpuinfo";
+static const char* KERNELVERSION = "/proc/version";
+static const char* UPTIME = "/proc/uptime";
+static const char* FILESYSTEM = "/proc/filesystems";
 
 int maquina(FILE *f,const char *dato,char *output);
 
@@ -136,4 +136,3 @@ int maquina(FILE *f,const char *dato,char *output){
     }
     return -1;
 }
-
